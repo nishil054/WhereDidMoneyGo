@@ -8,9 +8,7 @@
 
             function getDetails() {
                 detailsService.getDetailsData({}).then(function (result) {
-                    debugger;
                     vm.details = result.data;
-                    console.log(vm.details);
                 });
             }
 
@@ -30,9 +28,9 @@
                 });
             };
 
-            vm.openUserEditModal = function (user) {
+            vm.openExpenseEditModal = function (user) {
                 var modalInstance = $uibModal.open({
-                    templateUrl: '/App/Main/views/users/editModal.cshtml',
+                    templateUrl: '/App/Main/views/ExpenseDetails/expenseEditModal.cshtml',
                     controller: 'app.views.users.editModal as vm',
                     backdrop: 'static',
                     resolve: {
