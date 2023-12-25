@@ -532,7 +532,6 @@
     <Content Include="App\Main\views\ExpenseDetails\createExpenseDetails.js" />
     <Content Include="App\Main\views\ExpenseDetails\expenseEditModal.js" />
     <Content Include="App\Main\views\ExpenseDetails\index.js" />
-    <Content Include="App\Main\views\ExpenseDetails\monthlyDetails.js" />
     <Content Include="App\Main\views\layout\layout.js" />
     <Content Include="App\Main\views\home\home.js" />
     <Content Include="App\Main\views\about\about.js" />
@@ -2780,7 +2779,6 @@
     <Content Include="App\Main\views\ExpenseDetails\index.cshtml" />
     <Content Include="App\Main\views\ExpenseDetails\createExpenseDetails.cshtml" />
     <Content Include="App\Main\views\ExpenseDetails\expenseEditModal.cshtml" />
-    <Content Include="App\Main\views\ExpenseDetails\monthlyDetails.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

@@ -9,7 +9,6 @@
                 //createMenuItem(App.localize("HomePage"), "", "home", "home"),
 
                 createMenuItem(App.localize("Expense"), "", "business", "Details"),
-                createMenuItem(App.localize("Monthly Expense"), "", "business", "MonthlyDetails"),
                 //createMenuItem(App.localize("Tenants"), "Pages.Tenants", "business", "tenants"),
                 createMenuItem(App.localize("Users"), "Pages.Users", "people", "users"),
                     //createMenuItem(App.localize("Roles"), "Pages.Roles", "local_offer", "roles"),
