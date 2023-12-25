@@ -1,1 +1,147 @@
-﻿
+﻿<form id="frm_edit_items" name="itemsEditForm" novalidate>
+
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="vm.cancel()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">
+            <span>@L("EditItem")</span>
+        </h4>
+    </div>
+    <div class="modal-body">
+        <div class="row clearfix">
+            <div class="col-sm-6">
+                <div class="form-group form-float">
+                    <label class="form-label">@L("CategoryName")</label>
+                    <div class="form-line">
+                        @*<input class="form-control" type="text" name="categoryName" ng-model="vm.item.categoryName" required maxlength="32" minlength="2">*@
+
+                        <select id="categoryName" ui-select2 class="form-control" ng-model="vm.item.categoryId" required>
+                            <option value="{{ item.categoryId }}">{{ item.categoryName }}</option>
+                            <option ng-repeat="catItem in vm.categoryItems" value="{{ catItem.id }}">{{ catItem.name }}</option>
+                        </select>
+
+                        @*<select id="categoryId" ui-select2 class="form-control" ng-model="vm.item.categoryName" required>
+                                <option value="">-Select-</option>
+                                <option ng-repeat="item in vm.item" value="{{item.categoryId}}">{{ item.categoryName }}</option>
+                            </select>*@
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group form-float">
+                    <label class="form-label">@L("ItemDescription")</label>
+                    <div class="form-line">
+                        <input type="text" name="itemDescription" ng-model="vm.item.itemDescription" required maxlength="32" minlength="2" class="validate form-control">
+
+                    </div>
+                </div>
+            </div>
+
+            @*-----------------------------------------------------------------------------------*@
+            <div class="col-sm-12">
+                <label for="message" class="form-label flex_disply"
+                       style="display: flex; align-items: center; justify-content: space-between;">
+                    <span class="text-right" style="width: 15%;">
+                        <a class="btn btn-primary add" ng-click="addItem()">
+                            <i class="material-icons">add</i>
+                        </a>
+                    </span>
+                </label>
+                <div class="row clearfix" ng-repeat="data in itemList">
+
+                    <div class="col-sm-4" id="itemsShow" style="margin-top:15px;">
+                        <label for="ddltype" class="form-label">UOM</label>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input class=" form-control" style="width: 100%;" type="text"
+                                       ng-model="data.uom" />
+
+                                <span id="isShowP-{{$index}}" style="color:Red;display:none">
+                                    Please enter UOM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" style="margin-top:15px;">
+                        <label for="prl" class="form-label">Price</label>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input class=" form-control" style="width: 100%;" type="number" ng-model="data.price" />
+
+                                <span id="isShowP-{{$index}}" style="color:Red;display:none">
+                                    Please enter Price
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" style="margin-top:15px;">
+                        <div class="form-group form-float">
+                            <label for="prl" class="form-label">MOC</label>
+                            <div class="form-line">
+                                <input class=" form-control allow_decimal" style="width: 100%;" type="text"
+                                       ng-model="data.moc" />
+
+                                <span id="isShowH-{{$index}}" style="color:Red;display:none">Please MOC.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3" style="margin-top:15px;">
+                        <label for="prl" class="form-label">density</label>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input class=" form-control" style="width: 100%;" type="text" ng-model="data.density" />
+
+                                <span id="isShowP-{{$index}}" style="color:Red;display:none">
+                                    Please enter Density
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3" style="margin-top:15px;">
+                        <label for="prl" class="form-label">GrossAreaInSQM</label>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input class=" form-control" style="width: 100%;" type="number" ng-model="data.grossAreaInSQM" />
+
+                                <span id="isShowP-{{$index}}" style="color:Red;display:none">
+                                    Please enter GrossAreaInSOM
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                </div>
+            </div>
+            @*--------------------------------------------------------------------------------------*@
+
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+
+        <div class=" data_section">
+            <ul>
+                <li>
+                    <button type="button" class="btn btn-default waves-effect" ng-click="vm.cancel()">
+                        @L("Cancel")
+                    </button>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-primary waves-effect" ng-click="vm.save()" ng-disabled="roleCreateForm.$invalid || btndisable">
+                        @L("Save")
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+</form>
