@@ -9,10 +9,11 @@
                 //createMenuItem(App.localize("HomePage"), "", "home", "home"),
 
                 createMenuItem(App.localize("Expense"), "", "business", "Details"),
+                createMenuItem(App.localize("Monthly View"), "", "business", "MonthlyView"),
                 //createMenuItem(App.localize("Tenants"), "Pages.Tenants", "business", "tenants"),
                 createMenuItem(App.localize("Users"), "Pages.Users", "people", "users"),
                     //createMenuItem(App.localize("Roles"), "Pages.Roles", "local_offer", "roles"),
-                    //createMenuItem(App.localize("About"), "", "info", "about"),
+                //createMenuItem(App.localize("About"), "", "info", "about"),
 
                 createMenuItem(App.localize("MultiLevelMenu"), "", "menu", "", [
                     createMenuItem("ASP.NET Boilerplate", "", "", "", [

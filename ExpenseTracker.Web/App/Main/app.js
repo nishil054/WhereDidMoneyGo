@@ -65,6 +65,11 @@
                     url: '/expensedetails',
                     templateUrl: '/App/Main/views/ExpenseDetails/index.cshtml',
                     menu: 'About' //Matches to name of 'About' menu in ExpenseTrackerNavigationProvider
+                })
+                .state('MonthlyView', {
+                    url: '/monthlyview',
+                    templateUrl: '/App/Main/views/ExpenseDetails/monthlyView.cshtml',
+                    menu: 'About' //Matches to name of 'About' menu in ExpenseTrackerNavigationProvider
                 });
         }
     ]);

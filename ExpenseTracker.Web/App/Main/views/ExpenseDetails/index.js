@@ -51,16 +51,16 @@
                 });
             };
 
-            vm.delete = function (user) {
+            vm.delete = function (details) {
                 abp.message.confirm(
-                    "Delete user '" + user.userName + "'?",
+                    "Delete user '" + details.expenseName + "'?",
                     "Delete",
                     function (result) {
                         if (result) {
-                            detailsService.delete({ id: user.id })
+                            detailsService.deleteExpense({ id: details.id })
                                 .then(function () {
-                                    abp.notify.info("Deleted user: " + user.userName);
-                                    getUsers();
+                                    abp.notify.info("Deleted Expense: " + details.expenseName);
+                                    getDetails();
                                 });
                         }
                     });
