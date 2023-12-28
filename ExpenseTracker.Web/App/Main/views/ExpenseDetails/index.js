@@ -27,6 +27,15 @@
                     getDetails();
                 });
             };
+            $scope.totalPrice = function (expenses) {
+                var total = 0;
+                angular.forEach(expenses, function (expense) {
+                    total += expense.price;
+                });
+
+                return '₹' + total; // You can format the total as needed
+            }
+
 
             vm.openExpenseEditModal = function (user) {
                 var modalInstance = $uibModal.open({

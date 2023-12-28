@@ -1,9 +1,9 @@
 ﻿(function () {
     angular.module('app').controller('app.views.expenseDetails.monthlyView', [
-        '$scope', '$uibModalInstance', 'abp.services.app.details',
-        function ($scope, $uibModalInstance, detailsService) {
+        '$scope','abp.services.app.details',
+        function ($scope, detailsService) {
             var vm = this;
-
+            console.log("---------------------------------------")
             vm.details = {
                 isActive: true
             };

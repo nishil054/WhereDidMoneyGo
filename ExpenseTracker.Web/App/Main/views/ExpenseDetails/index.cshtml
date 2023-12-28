@@ -18,10 +18,10 @@
             <div class="body table-responsive">
                 @*<h3>Total Expenditure -</h3>*@
                 <!-- ******************************************************** -->
+                    <h4>Total Expenditure - </h4>
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            @*<th>Total Expenditure -  {{  }}</th>*@
                             <th>ExpenseName</th>
                             <th>Price</th>
                             <th>Date</th>
@@ -43,6 +43,12 @@
                                     <li><a href="javascript:void(0);" class="waves-effect waves-block" ng-click="vm.delete(details)"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
                                 </ul>
                             </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Expenditure -</strong></td>
+                            <td>{{totalPrice(vm.details)}}</td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

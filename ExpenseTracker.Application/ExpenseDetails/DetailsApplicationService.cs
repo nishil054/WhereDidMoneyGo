@@ -35,10 +35,6 @@ namespace ExpenseTracker.ExpenseDetails
         
         public async Task CreateExpense(CreateExpenseDto input)
         {
-            //Details obj = new Details();
-            //obj.ExpenseName=input.ExpenseName;
-            //obj.Price=input.Price;
-            //obj.Date = input.Date;
             var Details = input.MapTo<Details>();
             await _expenseDetailsRepository.InsertAsync(Details);
         }
