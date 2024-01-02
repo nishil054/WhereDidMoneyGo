@@ -44,6 +44,7 @@
                     backdrop: 'static',
                     resolve: {
                         id: function () {
+                            //alert(555);
                             return user.id;
                         }
                     }
